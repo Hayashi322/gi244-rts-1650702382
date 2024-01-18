@@ -6,7 +6,8 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private Camera cam;
 
-    [Header("Move")] private float moveSpeed;
+    [Header("Move")] 
+    [SerializeField] private float moveSpeed;
     [SerializeField] private Transform corner1;
     [SerializeField] private Transform corner2;
     [SerializeField] private float xInput;
@@ -19,7 +20,9 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float maxZoomDist;
     [SerializeField] private float dist; //between camera base and camera
 
-    
+    [Header("Rotate")]
+    [SerializeField] private float rotationAmount;
+    [SerializeField] private Quaternion newRotation;
 
 
     public static CameraController instance;
@@ -28,6 +31,9 @@ public class CameraController : MonoBehaviour
     {
         instance = this;
         cam = Camera.main;
+
+        newRotation = transform.rotation;
+        rotationAmount = 1;
     }//Awake
 
 
@@ -45,6 +51,7 @@ public class CameraController : MonoBehaviour
     {
         MoveByKB();
         Zoom();
+        Rotate();
     }// Update 
 
     private void MoveByKB()
@@ -86,6 +93,16 @@ public class CameraController : MonoBehaviour
         zoomSpeed;
 
     }//Zoom
+
+    void Rotate()
+    {
+        if (Input.GetKey(KeyCode.Q))
+            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
+        if (Input.GetKey(KeyCode.E))
+            newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
+        transform.rotation = Quaternion.Lerp(transform.rotation,
+        newRotation, Time.deltaTime * moveSpeed);
+    }//Rotate
 
 
 }//CameraController
