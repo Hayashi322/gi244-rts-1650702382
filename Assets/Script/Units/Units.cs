@@ -57,7 +57,7 @@ public class Units : MonoBehaviour
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
 
-
+    
 
     private void Awake()
     {
@@ -75,4 +75,11 @@ public class Units : MonoBehaviour
     {
         
     }
+
+    public void ToggleSelectionVisual(bool flag)
+    {
+        if (selectionVisual != null)
+            selectionVisual.SetActive(flag);
+    }
+
 }
