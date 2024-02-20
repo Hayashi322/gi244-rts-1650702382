@@ -41,7 +41,7 @@ public class CameraController : MonoBehaviour
     {
         moveSpeed = 50;
 
-        zoomSpeed = 25;
+        zoomSpeed = 15;
         minZoomDist = 15;
         maxZoomDist = 50;
     }// Start 

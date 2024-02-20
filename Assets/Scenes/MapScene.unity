@@ -3556,6 +3556,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 177072, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 177072, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: m_TagString
+      value: Unit
+      objectReference: {fileID: 0}
     - target: {fileID: 409140, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.12
@@ -3595,6 +3603,46 @@ PrefabInstance:
     - target: {fileID: 409140, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: curHP
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: armour
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: unitName
+      value: Brook
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: visualRange
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: weaponRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: maxWpnDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: unitCost.food
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: unitCost.gold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: unitCost.wood
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378294392370557909, guid: b881a5b10ef7e014f907efb47219ac83, type: 3}
+      propertyPath: unitCost.stone
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -4747,7 +4747,6 @@ GameObject:
   m_Component:
   - component: {fileID: 409140}
   - component: {fileID: 9555246}
-  - component: {fileID: -3622170490558153573}
   - component: {fileID: 5719796754620226696}
   - component: {fileID: 5378294392370557909}
   - component: {fileID: 7779833258252149387}
@@ -4812,29 +4811,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &-3622170490558153573
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177072}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &5719796754620226696
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4871,24 +4847,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  unitName: 
-  unitPic: {fileID: 0}
+  unitName: Brook
+  unitPic: {fileID: 21300000, guid: ffa764eb2eb713941aeaa73504a2557a, type: 3}
   curHP: 0
-  maxHP: 100
+  maxHP: 150
   moveSpeed: 5
   minWpnDamage: 0
-  maxWpnDamage: 0
-  armour: 0
-  visualRange: 0
-  weaponRange: 0
+  maxWpnDamage: 15
+  armour: 3
+  visualRange: 25
+  weaponRange: 10
   state: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 7523088105044442876}
   unitCost:
-    food: 0
-    wood: 0
-    gold: 0
-    stone: 0
+    food: 25
+    wood: 5
+    gold: 20
+    stone: 5
   unitWaitTime: 0.1
 --- !u!195 &7779833258252149387
 NavMeshAgent:
