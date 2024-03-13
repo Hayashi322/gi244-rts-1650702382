@@ -10,6 +10,7 @@ public class Building : Structure
     public Transform RallyPoint { get { return rallyPoint; } }
 
     [SerializeField] private GameObject[] unitPrefabs;
+    public GameObject[] UnitPrefabs { get { return unitPrefabs; } }
 
     [SerializeField] private List<Units> recruitList = new List<Units>();
 
@@ -17,7 +18,12 @@ public class Building : Structure
     [SerializeField] private int curUnitProgress = 0;
 
     [SerializeField] private float curUnitWaitTime = 0f;
-    
+
+    [SerializeField] private bool isFunctional;
+    public bool IsFunctional { get { return isFunctional; } set { isFunctional = value; } }
+
+    public object UnitPrefab { get; internal set; }
+
     // Start is called before the first frame update
     void Start()
     {
