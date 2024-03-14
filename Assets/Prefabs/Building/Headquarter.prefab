@@ -598,9 +598,9 @@ MonoBehaviour:
   - {fileID: 1659822698518960, guid: 38f44494a8df1d44b8ee1a93a3122155, type: 3}
   - {fileID: 177072, guid: 508e39bedb2268345a71d08a633434e2, type: 3}
   recruitList: []
-  unitTimer: 0
-  curUnitProgress: 0
-  curUnitWaitTime: 0
+  unitTimer: 100
+  curUnitProgress: 2
+  curUnitWaitTime: 2
   isFunctional: 0
   isHQ: 0
   intoTheGround: 5

@@ -4418,6 +4418,8 @@ MonoBehaviour:
     gold: 20
     stone: 0
   unitWaitTime: 0.1
+  isBuilder: 0
+  builder: {fileID: 0}
 --- !u!195 &8433371182186667049
 NavMeshAgent:
   m_ObjectHideFlags: 0
