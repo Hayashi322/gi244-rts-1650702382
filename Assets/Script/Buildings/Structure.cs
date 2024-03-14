@@ -2,7 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Structure : MonoBehaviour
+[System.Serializable]
+public struct StructureCost
+{
+    public int food;
+    public int wood;
+    public int gold;
+    public int stone;
+}
+
+public abstract class Structure : MonoBehaviour
 {
     [SerializeField]
     protected string structureName;
@@ -17,14 +26,19 @@ public class Structure : MonoBehaviour
 
     [SerializeField]
     protected int maxHP;
-    public int MaxHP { get { return maxHP; } set {  maxHP = value; } }
+    public int MaxHP { get { return maxHP; } set { maxHP = value; } }
 
     [SerializeField]
     protected Factions faction;
-    
+    public Factions Faction { get { return faction; } set { faction = value; } }
+
     [SerializeField]
     protected GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
+
+    [SerializeField]
+    private StructureCost structureCost;
+    public StructureCost StructureCost { get { return structureCost; } set { structureCost = value; } }
     
     // Start is called before the first frame update
     void Start()

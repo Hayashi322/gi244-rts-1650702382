@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &486282
 Transform:
   m_ObjectHideFlags: 0
@@ -3961,7 +3961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &485818
 Transform:
   m_ObjectHideFlags: 0
@@ -4751,13 +4751,14 @@ GameObject:
   - component: {fileID: 5378294392370557909}
   - component: {fileID: 7779833258252149387}
   - component: {fileID: 6864840931783714322}
+  - component: {fileID: 1317196265257879213}
   m_Layer: 0
-  m_Name: Skeleton
+  m_Name: Builder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &409140
 Transform:
   m_ObjectHideFlags: 0
@@ -4847,8 +4848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  unitName: Brook
-  unitPic: {fileID: 21300000, guid: ffa764eb2eb713941aeaa73504a2557a, type: 3}
+  unitName: Jo
+  unitPic: {fileID: 21300000, guid: b42ba614efd59e04194ce2610294abb6, type: 3}
   curHP: 0
   maxHP: 150
   moveSpeed: 5
@@ -4866,7 +4867,7 @@ MonoBehaviour:
     gold: 20
     stone: 5
   unitWaitTime: 0.1
-  isBuilder: 0
+  isBuilder: 1
   builder: {fileID: 0}
 --- !u!195 &7779833258252149387
 NavMeshAgent:
@@ -4902,6 +4903,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d503d4118152abf458d7d6445efed6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1317196265257879213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1befe68c2cc359444ac8771dbd137109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toBuild: 0
+  showGhost: 0
+  buildingList:
+  - {fileID: 3598477441885839991, guid: 59b895d32f1d02140bc0eaf9660fa16e, type: 3}
+  - {fileID: 3598477441885839991, guid: 42a9641b4cd339a44b8f0e67549de54c, type: 3}
+  ghostBuildingList:
+  - {fileID: 3598477441885839991, guid: 1449d0a3929157343a594cce8f3e14ba, type: 3}
+  - {fileID: 3598477441885839991, guid: c0d5428bd3109e847abdfe129d59f92c, type: 3}
+  newBuilding: {fileID: 0}
+  ghostBuilding: {fileID: 0}
+  inProgressBuilding: {fileID: 0}
 --- !u!1 &178220
 GameObject:
   m_ObjectHideFlags: 0

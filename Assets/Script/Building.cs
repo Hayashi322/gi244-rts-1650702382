@@ -22,12 +22,18 @@ public class Building : Structure
     [SerializeField] private bool isFunctional;
     public bool IsFunctional { get { return isFunctional; } set { isFunctional = value; } }
 
-    public object UnitPrefab { get; internal set; }
+    [SerializeField] private bool isHQ;
+    public bool IsHQ { get { return isHQ; } }
+
+    // How deep into the ground the building is at the construction site
+    [SerializeField] private float intoTheGround = 5f;
+    public float IntoTheGround { get { return intoTheGround; } }
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        curHP = maxHP;
+        
     }
 
     // Update is called once per frame
@@ -101,6 +107,7 @@ public class Building : Structure
         recruitList.RemoveAt(0);
 
         Units unit = unitObj.GetComponent<Units>();
+        unit.Faction = faction; 
         unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
 
         //Add unit into faction's Army
@@ -117,4 +124,8 @@ public class Building : Structure
         if (SelectionVisual != null)
             SelectionVisual.SetActive(flag);
     }
+    private float timer = 0f; //Constructing timer
+    public float Timer { get { return timer; } set { timer = value; } }
+    private float waitTime = 0.5f; //How fast it will be construct, higher is longer
+    public float WaitTime { get { return waitTime; } set { waitTime = value; } }
 }
