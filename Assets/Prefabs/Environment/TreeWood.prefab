@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 974079948550971727}
   - component: {fileID: 7261978846678909385}
   - component: {fileID: 59986945723900464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeWood
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

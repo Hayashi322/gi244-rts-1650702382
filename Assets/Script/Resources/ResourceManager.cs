@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour
 
     [SerializeField]
     private Resourcesource[] resources;
+    public Resourcesource[] Resourcesources { get { return resources; } }
 
     public static ResourceManager instance;
 
