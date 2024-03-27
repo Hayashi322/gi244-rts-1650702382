@@ -26,7 +26,7 @@ public class UnitSelect : MonoBehaviour
     private Vector2 startPos;//point where mouse is down
 
     [SerializeField]
-    private Unit curEnemy;
+    private Units curEnemy;
 
 
     private Camera cam;
@@ -91,6 +91,12 @@ public class UnitSelect : MonoBehaviour
             units.ToggleSelectionVisual(true);
             ShowUnit(units);
         }
+        else
+        {
+            curEnemy = units;
+            curEnemy.ToggleSelectionVisual(true);
+            showEnemyUnit(units);
+        }
     }
 
     private void TrySelect(Vector2 screenPos)
@@ -125,6 +131,8 @@ public class UnitSelect : MonoBehaviour
             curBuilding.ToggleSelectionVisual(false);
         if (curResource != null)
             curResource.ToggleSelectionVisual(false);
+        if (curEnemy != null)
+            curEnemy.ToggleSelectionVisual(false);
     }
 
     private void ClearEverything()
@@ -215,5 +223,9 @@ public class UnitSelect : MonoBehaviour
             }
         }
         selectionBox.sizeDelta = new Vector2(0, 0); //clear Selection Box's size;
+    }
+    private void showEnemyUnit(Units u)
+    { 
+        InfoManager.instance.ShowEnemyAllInfo(u);
     }
 }

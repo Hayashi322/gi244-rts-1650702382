@@ -4303,8 +4303,9 @@ GameObject:
   - component: {fileID: 6249562244707245425}
   - component: {fileID: 8433371182186667049}
   - component: {fileID: 8048095676964954870}
+  - component: {fileID: 3408906898440633180}
   m_Layer: 6
-  m_Name: Soldier
+  m_Name: BritishSoldier
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4399,7 +4400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  unitName: Regular
+  unitName: Brit.Regular
   unitPic: {fileID: 21300000, guid: 9ca9712eee1494a49ad64baab6546ca4, type: 3}
   curHP: 100
   maxHP: 100
@@ -4420,6 +4421,14 @@ MonoBehaviour:
   unitWaitTime: 0.1
   isBuilder: 0
   builder: {fileID: 0}
+  isWorker: 0
+  worker: {fileID: 0}
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
+  curEnemyUnitTarget: {fileID: 0}
+  attackRate: 1
+  lastAttackTime: 0
+  defendRange: 30
 --- !u!195 &8433371182186667049
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4452,6 +4461,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d503d4118152abf458d7d6445efed6d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3408906898440633180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659822698518960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8670858b70afc4bb7dc6a03a45c4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1685525561228416
