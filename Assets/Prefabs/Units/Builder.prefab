@@ -4748,8 +4748,8 @@ GameObject:
   - component: {fileID: 409140}
   - component: {fileID: 9555246}
   - component: {fileID: 5719796754620226696}
-  - component: {fileID: 5378294392370557909}
   - component: {fileID: 7779833258252149387}
+  - component: {fileID: 5378294392370557909}
   - component: {fileID: 6864840931783714322}
   - component: {fileID: 1317196265257879213}
   - component: {fileID: -4601913252506483775}
@@ -4836,6 +4836,28 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!195 &7779833258252149387
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177072}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 4
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &5378294392370557909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4872,28 +4894,13 @@ MonoBehaviour:
   builder: {fileID: 0}
   isWorker: 1
   worker: {fileID: 0}
---- !u!195 &7779833258252149387
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177072}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
+  curEnemyUnitTarget: {fileID: 0}
+  curEnemyBuildingTarget: {fileID: 0}
+  attackRate: 1
+  lastAttackTime: 0
+  defendRange: 30
 --- !u!114 &6864840931783714322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,9 +4930,11 @@ MonoBehaviour:
   buildingList:
   - {fileID: 3598477441885839991, guid: 59b895d32f1d02140bc0eaf9660fa16e, type: 3}
   - {fileID: 3598477441885839991, guid: 42a9641b4cd339a44b8f0e67549de54c, type: 3}
+  - {fileID: 3523076954196611028, guid: 625e7e664a4d07e40800bd0d7e0933f7, type: 3}
   ghostBuildingList:
   - {fileID: 3598477441885839991, guid: 1449d0a3929157343a594cce8f3e14ba, type: 3}
   - {fileID: 3598477441885839991, guid: c0d5428bd3109e847abdfe129d59f92c, type: 3}
+  - {fileID: 3523076954196611028, guid: 0c7f74defdd6cb141a3aa3d613533aa3, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
