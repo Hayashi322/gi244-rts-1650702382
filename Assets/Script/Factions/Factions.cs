@@ -51,6 +51,17 @@ public class Factions : MonoBehaviour
     [SerializeField]
     private int newResourceRange = 50; //range for worker to find new resource
 
+    [SerializeField] private GameObject[] buildingPrefabs;
+    public GameObject[] BuildingPrefabs { get { return buildingPrefabs; } }
+
+    [SerializeField] private GameObject[] unitPrefabs;
+    public GameObject[] UnitPrefabs { get { return unitPrefabs; } }
+
+    private int unitLimit = 6; //Initial unit limit
+    public int UnitLimit { get { return unitLimit; } }
+    private int housingUnitNum = 5; //number of units per each housing
+    public int HousingUnitNum { get { return housingUnitNum; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -187,5 +198,45 @@ public class Factions : MonoBehaviour
             }
         }
         return closest[UnityEngine.Random.Range(0, closest.Length)];
+    }
+    public void UpdateHousingLimit()
+    {
+        unitLimit = 6; //starting unit Limit
+
+        foreach (Building b in aliveBuildings)
+        {
+            if (b.IsHousing && b.IsFunctional)
+            {
+                unitLimit += housingUnitNum;
+            }
+        }
+
+        if (unitLimit >= 100)
+            unitLimit = 100;
+        else if (unitLimit < 0)
+            unitLimit = 0;
+
+        MainUI.instance.UpdateAllResource(this);
+    }
+    public bool CheckUnitCost(int i)
+    {
+        Units unit = unitPrefabs[i].GetComponent<Units>();
+
+        if (unit == null)
+            return false;
+
+        if (food < unit.UnitCost.food)
+            return false;
+
+        if (wood < unit.UnitCost.wood)
+            return false;
+
+        if (gold < unit.UnitCost.gold)
+            return false;
+
+        if (stone < unit.UnitCost.stone)
+            return false;
+
+        return true;
     }
 }
