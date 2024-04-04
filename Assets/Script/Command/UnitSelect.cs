@@ -33,6 +33,8 @@ public class UnitSelect : MonoBehaviour
     private Factions faction;
 
     public static UnitSelect instance;
+    private float timer = 0f;
+    private float timeLimit = 0.5f;
 
     void Awake()
     {
@@ -77,6 +79,14 @@ public class UnitSelect : MonoBehaviour
             ReleaseSelectionBox(Input.mousePosition);
             TrySelect(Input.mousePosition);
         }
+
+        timer += Time.deltaTime;
+
+        if (timer >= timeLimit)
+        {
+            timer = 0f;
+            UpdateUI();
+        }
     }
 
     private void SelectUnit(RaycastHit hit)
@@ -95,7 +105,7 @@ public class UnitSelect : MonoBehaviour
         {
             curEnemy = units;
             curEnemy.ToggleSelectionVisual(true);
-            showEnemyUnit(units);
+            ShowEnemyUnit(units);
         }
     }
 
@@ -140,6 +150,8 @@ public class UnitSelect : MonoBehaviour
         ClearAllSelectionVisual();
         curUnit.Clear();
         curBuilding = null;
+        curResource = null;
+        curEnemy = null;
 
         //Clear UI
         InfoManager.instance.ClearAllInfo();
@@ -228,12 +240,28 @@ public class UnitSelect : MonoBehaviour
         }
         selectionBox.sizeDelta = new Vector2(0, 0); //clear Selection Box's size;
     }
-    private void showEnemyUnit(Units u)
+    private void ShowEnemyUnit(Units u)
     { 
         InfoManager.instance.ShowEnemyAllInfo(u);
     }
     private void ShowEnemyBuilding(Building b)
     {
         InfoManager.instance.ShowEnemyAllInfo(b);
+    }
+    private void UpdateUI()
+    {
+        if (curUnit.Count == 1)
+            ShowUnit(curUnit[0]);
+        else if (curEnemy != null)
+            ShowEnemyUnit(curEnemy);
+        else if (curResource != null)
+            ShowResource();
+        else if (curBuilding != null)
+        {
+            if (GameManager.instance.MyFaction.IsMyBuilding(curBuilding))
+                ShowBuilding(curBuilding);//Show building info
+            else
+                ShowEnemyBuilding(curBuilding);
+        }
     }
 }

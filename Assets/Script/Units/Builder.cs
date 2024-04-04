@@ -60,7 +60,6 @@ public class Builder : MonoBehaviour
             case UnitState.BuildProgress:
                 BuildProgress();
                 break;
-
         }
 
     }

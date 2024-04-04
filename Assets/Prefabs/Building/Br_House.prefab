@@ -66,9 +66,9 @@ MonoBehaviour:
   rallyPoint: {fileID: 931897665942930938}
   unitPrefabs: []
   recruitList: []
-  unitTimer: 50
-  curUnitProgress: 2
-  curUnitWaitTime: 2
+  unitTimer: 10
+  curUnitProgress: 1
+  curUnitWaitTime: 5
   isFunctional: 0
   isHQ: 0
   isHousing: 1
