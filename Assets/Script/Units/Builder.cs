@@ -215,12 +215,16 @@ public class Builder : MonoBehaviour
                 //Raise up building from the ground
                 inProgressBuilding.transform.position += new Vector3(0f, b.IntoTheGround / (b.MaxHP - 1), 0f);
 
-            if (b.CurHP >= b.MaxHP) //finish{
+            if (b.CurHP >= b.MaxHP) //finish
+            {
                 b.CurHP = b.MaxHP;
-            b.IsFunctional = true;
+                b.IsFunctional = true;
 
-            inProgressBuilding = null; //Clear this job off his mind
-            unit.SetState(UnitState.Idle);
+                inProgressBuilding = null; //Clear this job off his mind
+                unit.SetState(UnitState.Idle);
+                
+                unit.Faction.UpdateHousingLimit();
+            }
         }
     }
     private void OnTriggerStay(Collider other)

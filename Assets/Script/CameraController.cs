@@ -10,7 +10,10 @@ public class CameraController : MonoBehaviour
     [Header("Move")] 
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform corner1;
+    public Transform Corner1 { get { return corner1; } }
+
     [SerializeField] private Transform corner2;
+    public Transform Corner2 { get { return corner2; } }
     [SerializeField] private float xInput;
     [SerializeField] private float zInput;
 

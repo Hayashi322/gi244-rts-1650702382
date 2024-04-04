@@ -5,7 +5,7 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
     public float randomRate = 0.3f;
-    public float frequency = 2f;
+    public float frequency = 0.1f;
 
     private float waited = 0;
 

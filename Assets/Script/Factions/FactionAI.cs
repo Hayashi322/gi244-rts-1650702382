@@ -41,7 +41,7 @@ public class FactionAI : MonoBehaviour
         //Create Workers
         if (curHQ != null)
         {
-            if (support.Workers.Count < 5) // if there are less than 5 units, keep recruiting Workers
+            if (support.Workers.Count + curHQ.CheckNumInRecruitList(0) < 5) // if there are less than 5 units, keep recruiting Workers
             {
                 // if we can recruit a new worker/builder, do so
                 if (faction.CheckUnitCost(0))
@@ -57,6 +57,50 @@ public class FactionAI : MonoBehaviour
                 if (faction.CheckUnitCost(1))
                     curBarrack.ToCreateUnit(0); // recruits main fighter
             }
+        }
+        
+        UpdateImportantBuilding();
+        WorkerFindResource(ResourceType.Wood, 3);
+        WorkerFindResource(ResourceType.Food, 2);
+    }
+    private void UpdateImportantBuilding()
+    {
+        foreach (Building b in faction.AliveBuildings)
+        {
+            if (!b.IsFunctional)
+                continue;
+
+            if (b.IsHQ)
+                curHQ = b;
+
+            if (b.IsBarrack)
+                curBarrack = b;
+        }
+    }
+    private void WorkerFindResource(ResourceType rType, int n)
+    {
+        foreach (GameObject workerObj in support.Workers)
+        {
+            Units u = workerObj.GetComponent<Units>();
+
+            if (u.State == UnitState.Idle) //he's idle
+            {
+                Resourcesource r = faction.GetClosestResource(u.transform.position, rType);
+
+                if (r == null)
+                    continue;
+
+                u.Worker.ToGatherResource(r, r.transform.position);
+                n--;
+            }
+            else if (u.Worker.CurResourceSource != null) //he's has a job
+            {
+                if (u.Worker.CurResourceSource.RsrcType == rType) //he is already gathering this kind of resource
+                    n--;
+            }
+
+            if (n == 0)
+                break;
         }
     }
 }

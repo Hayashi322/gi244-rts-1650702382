@@ -115,11 +115,17 @@ public class UnitAI : MonoBehaviour
 
             // skip if it is a natural/neutral Building
             if (target.Faction == null)
+            {
                 continue;
+            }
+                
 
             // is this my building?
             else if (unit.Faction.IsMyBuilding(target))
+            {
                 continue;
+            }
+                
 
             // if it is not the closest enemy building or the distance is less than the closest distance it currently has
             else if (!closest || (Vector3.Distance(transform.position, hits[x].transform.position) < closestDist))

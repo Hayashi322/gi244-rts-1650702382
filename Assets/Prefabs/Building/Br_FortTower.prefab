@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structureName: Fort Tower
   structurePic: {fileID: 21300000, guid: 629fdcbc32f31bc4193b0c6053bf08ce, type: 3}
-  curHP: 1
+  curHP: 0
   maxHP: 100
   faction: {fileID: 0}
   selectionVisual: {fileID: 6088226369671352312}
@@ -69,6 +69,8 @@ MonoBehaviour:
   curUnitWaitTime: 0
   isFunctional: 0
   isHQ: 0
+  isHousing: 0
+  isBarrack: 0
   intoTheGround: 5
   unitLayerMask:
     serializedVersion: 2
