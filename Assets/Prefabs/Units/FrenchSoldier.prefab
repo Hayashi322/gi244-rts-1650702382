@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1659822698518960, guid: 38f44494a8df1d44b8ee1a93a3122155, type: 3}
       propertyPath: m_Name
-      value: French Soldier
+      value: FrenchSoldier
       objectReference: {fileID: 0}
     - target: {fileID: 4092135953349824, guid: 38f44494a8df1d44b8ee1a93a3122155, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 6249562244707245425, guid: 38f44494a8df1d44b8ee1a93a3122155, type: 3}
       propertyPath: unitName
       value: Fr. Regular
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249562244707245425, guid: 38f44494a8df1d44b8ee1a93a3122155, type: 3}
+      propertyPath: defendRange
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

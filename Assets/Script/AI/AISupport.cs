@@ -38,13 +38,9 @@ public class AISupport : MonoBehaviour
     }
     public void Refresh()
     {
-        foreach (Units u in faction.AliveUnits)
-        {
-            fighters.Clear();
-                    workers.Clear();
-                    builders.Clear();
-        }
-        
+          fighters.Clear();
+          workers.Clear();
+          builders.Clear();
         foreach (Units u in faction.AliveUnits)
         {
             if (u.gameObject == null)
@@ -58,6 +54,26 @@ public class AISupport : MonoBehaviour
 
             if (!u.IsBuilder && !u.IsWorker) //if it is a fighter
                 fighters.Add(u.gameObject);
+        }
+
+        hq.Clear();
+        houses.Clear();
+        barracks.Clear();
+
+        foreach (Building b in faction.AliveBuildings)
+        { 
+          if (b == null)
+                continue;
+
+            if (b.IsHQ)
+                hq.Add(b.gameObject);
+
+            if (b.IsHousing)
+                houses.Add(b.gameObject);
+
+            if (b.IsBarrack)
+                barracks.Add(b.gameObject);
+        
         }
     }
 }
