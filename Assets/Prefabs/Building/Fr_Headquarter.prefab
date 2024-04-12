@@ -597,7 +597,7 @@ MonoBehaviour:
   unitPrefabs:
   - {fileID: 177072, guid: 508e39bedb2268345a71d08a633434e2, type: 3}
   recruitList: []
-  unitTimer: 100
+  unitTimer: 10
   curUnitProgress: 2
   curUnitWaitTime: 2
   isFunctional: 0

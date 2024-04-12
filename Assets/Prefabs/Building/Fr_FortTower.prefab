@@ -53,7 +53,7 @@ MonoBehaviour:
   structurePic: {fileID: 21300000, guid: 629fdcbc32f31bc4193b0c6053bf08ce, type: 3}
   curHP: 0
   maxHP: 100
-  faction: {fileID: 0}
+  faction: {fileID: 7783918118677465745, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
   selectionVisual: {fileID: 6088226369671352312}
   structureCost:
     food: 0
@@ -64,9 +64,9 @@ MonoBehaviour:
   rallyPoint: {fileID: 0}
   unitPrefabs: []
   recruitList: []
-  unitTimer: 0
-  curUnitProgress: 0
-  curUnitWaitTime: 0
+  unitTimer: 10
+  curUnitProgress: 1
+  curUnitWaitTime: 5
   isFunctional: 0
   isHQ: 0
   isHousing: 0
@@ -99,8 +99,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 30, y: 15, z: 30}
+  m_Center: {x: 0, y: 5, z: 5}
 --- !u!54 &1341680095555795428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,11 +138,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 14.5, y: 7, z: 14.5}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 5, z: 5}
   m_TimeToStationary: 0.5
 --- !u!1 &5320004216090876822
 GameObject:

@@ -87,9 +87,9 @@ public class UnitAI : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Get potentialEnemyBuilding = ");
+                    //Debug.Log("Get potentialEnemyBuilding = ");
                     Building potentialEnemyBuilding = CheckForNearbyEnemyBuildings();
-                    Debug.Log("After Get potentialEnemyBuilding = ");
+                    //Debug.Log("After Get potentialEnemyBuilding = ");
                     if (potentialEnemyBuilding != null)
                     {
                         unit.ToAttackBuilding(potentialEnemyBuilding);
@@ -106,12 +106,11 @@ public class UnitAI : MonoBehaviour
 
         GameObject closest = null;
         float closestDist = 0.0f;
-        Debug.Log("Hit " + hits.Length);
+        //Debug.Log("Hit " + hits.Length);
         for (int x = 0; x < hits.Length; x++)
         {
-            Debug.Log("Test - CheckForNearbyEnemyBuildings" + hits[x].collider.gameObject.ToString());
+            //Debug.Log("Test - CheckForNearbyEnemyBuildings" + hits[x].collider.gameObject.ToString());
             Building target = hits[x].collider.GetComponent<Building>();// skip if this is not a building or destroyed
-            Debug.Log("target B = " + target.name);
             if ((target == null) || (target.CurHP <= 0))
                 continue;
 

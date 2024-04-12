@@ -1107,9 +1107,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6416747242500188836}
     m_Modifications:
+    - target: {fileID: 3078796433989795820, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 4159015243585222346}
     - target: {fileID: 8936574517838445357, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
       propertyPath: m_Name
       value: FrenchSoldier (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936574517838445357, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8939218040992276061, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1535,9 +1543,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6416747242500188836}
     m_Modifications:
+    - target: {fileID: 3078796433989795820, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 4159015243585222346}
     - target: {fileID: 8936574517838445357, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
       propertyPath: m_Name
       value: FrenchSoldier (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936574517838445357, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8939218040992276061, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9648,9 +9664,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6416747242500188836}
     m_Modifications:
+    - target: {fileID: 3078796433989795820, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 4159015243585222346}
     - target: {fileID: 8936574517838445357, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
       propertyPath: m_Name
       value: FrenchSoldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936574517838445357, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8939218040992276061, guid: 1b8522f8980b53e49b57242b1ae275ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10261,6 +10285,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 420854914331060805, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -103.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3907286482703622698, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
       propertyPath: m_Name
       value: France
@@ -10368,6 +10396,10 @@ PrefabInstance:
     - target: {fileID: 7783918118677465745, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
       propertyPath: aliveBuildings.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056499302522219986, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -105.1
       objectReference: {fileID: 0}
     - target: {fileID: 8122153936654299640, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
       propertyPath: m_LocalPosition.z
