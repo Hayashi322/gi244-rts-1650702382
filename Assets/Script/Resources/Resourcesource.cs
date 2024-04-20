@@ -40,7 +40,10 @@ public class Resourcesource : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        onRsrcQuantityChange.Invoke();
+
+        //onInfoQuantityChange.AddListener( delegate { InfoManager.instance.ShowAllInfo(this); });
+        //onInfoQuantityChange.AddListener(() => InfoManager.instance.ShowAllInof(this));
     }
 
     // Update is called once per frame
@@ -64,6 +67,8 @@ public class Resourcesource : MonoBehaviour
             amountToGive = amountRequest;
 
         quantity -= amountToGive;
+
+        onRsrcQuantityChange.Invoke();
 
         // if we're depleted, delete the resource
         if (quantity <= 0)
