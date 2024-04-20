@@ -108,5 +108,10 @@ public class CameraController : MonoBehaviour
         newRotation, Time.deltaTime * moveSpeed);
     }//Rotate
 
+    public void FocusOnPosition(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
 
 }//CameraController
