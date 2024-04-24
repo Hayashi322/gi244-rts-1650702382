@@ -4753,6 +4753,7 @@ GameObject:
   - component: {fileID: 6864840931783714322}
   - component: {fileID: 1317196265257879213}
   - component: {fileID: -4601913252506483775}
+  - component: {fileID: -1926279538527726916}
   m_Layer: 6
   m_Name: FrenchBuilder
   m_TagString: Unit
@@ -4956,6 +4957,18 @@ MonoBehaviour:
   amountCarry: 0
   maxCarry: 25
   carryType: 1
+--- !u!114 &-1926279538527726916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b65e86438e1d114aa237245c6b940f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &178220
 GameObject:
   m_ObjectHideFlags: 0
