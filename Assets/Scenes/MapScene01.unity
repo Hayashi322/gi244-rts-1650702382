@@ -9142,7 +9142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7783918118677465745, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
       propertyPath: aliveUnits.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7783918118677465745, guid: ea6d4861415ad254c8b3deadd8c9c49f, type: 3}
       propertyPath: aliveUnits.Array.data[0]
