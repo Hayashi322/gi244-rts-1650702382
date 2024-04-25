@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46057e2f4c7f3a04fb4e64074cbf06f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: Fort Tower
+  structureName: Fr_Fort Tower
   structurePic: {fileID: 21300000, guid: 629fdcbc32f31bc4193b0c6053bf08ce, type: 3}
   curHP: 0
   maxHP: 100
